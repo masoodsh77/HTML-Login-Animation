@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Yekan';
+    src: url(./assets/Fonts/Yekan.woff);
+}
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Yekan';
+}
+.continer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.Radar{
+    width: 55%;
+    height: 100%;
+    background: dodgerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: white;
+    font-size: 100px;
+}
+.Radar i{
+    position: absolute;
+    z-index: 100;
+}
+.circle1{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: sizeUp 3s linear infinite;
+    z-index: 1;
+}
+.circle2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: sizeUp 6s linear infinite;
+    z-index: 1;
+}
+.circle3{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: sizeUp 9s linear infinite;
+    z-index: 1;
+}
+@keyframes sizeUp {
+    from{
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 100px;
+        height: 100px;
+    }
+    to{
+        background-color: rgba(255, 255, 255, 0.0);
+        width: 500px;
+        height: 500px;
+    }
+}
+.LoginForm{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    font-family: 'Yekan';
+}
+.Login{
+    width: 75%;
+    text-align: right;
+    font-family: 'Yekan';
+}
+.Login a{
+    font-family: 'Yekan';
+    cursor: pointer;
+    font-size: 19px;
+    color: dodgerblue;
+}
+.Forms{
+    width: 75%;
+    text-align: right;
+}
+.Forms h4{
+    color: gray;
+}
+.Forms form{
+    width: 100%;
+}
+.Forms input{
+    width: 100%;
+    text-align: right;
+    font-family: 'Yekan';
+    font-size: 18px;
+    height: 35px;
+    margin: 20px 0;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.Forms img {
+    margin: 5px 0 -35px 0;
+}
+#captcha{
+    width: 70%;
+}
+.FormBtn{
+    width: 100%;
+    height: 35px;
+    margin-top: 25px;
+    font-family: 'Yekan';
+    color: white;
+    border: none;
+    background-color:dodgerblue ;
+    border-radius: 5px;
+}
+.Saveme{
+    width: 15px !important;
+    height: 15px !important;
+    margin: 10px 0;
+}
