@@ -8,16 +8,20 @@ html, body{
     height: 100%;
     width: 100%;
     font-family: 'Yekan';
+    overflow: hidden;
+
 }
 .continer{
     width: 100%;
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     align-items: center;
 }
 .Radar{
+    position: relative;
     width: 55%;
     height: 100%;
     background: dodgerblue;
@@ -27,6 +31,7 @@ html, body{
     align-content: center;
     color: white;
     font-size: 100px;
+    z-index: 1;
 }
 .Radar i{
     position: absolute;
@@ -47,8 +52,9 @@ html, body{
     height: 100px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
-    animation: sizeUp 6s linear infinite;
+    animation: sizeUp 3s linear infinite;
     z-index: 1;
+    animation-delay: 2s;
 }
 .circle3{
     position: absolute;
@@ -56,20 +62,40 @@ html, body{
     height: 100px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
-    animation: sizeUp 9s linear infinite;
+    animation: sizeUp 3s linear infinite;
     z-index: 1;
+    animation-delay: 4s;
 }
 @keyframes sizeUp {
     from{
-        background-color: rgba(255, 255, 255, 0.5);
         width: 100px;
         height: 100px;
     }
     to{
-        background-color: rgba(255, 255, 255, 0.0);
         width: 500px;
         height: 500px;
+        opacity: 0  ;
     }
+}
+.radarLine{
+    width: 500%;
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+    position: absolute;
+    z-index: 1;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.radarLineBox{
+    width: 50%;
+    border: 1px solid white;
+    box-shadow: 0px 15px 60px 10px white;
 }
 .LoginForm{
     width: 45%;
@@ -81,8 +107,11 @@ html, body{
     flex-direction: row-reverse;
     flex-wrap: wrap;
     font-family: 'Yekan';
+    position: relative;
+    z-index: 2;
 }
 .Login{
+
     width: 75%;
     text-align: right;
     font-family: 'Yekan';
@@ -133,4 +162,26 @@ html, body{
     width: 15px !important;
     height: 15px !important;
     margin: 10px 0;
+}
+@media only screen and (max-width:600px){
+    .Radar{
+        width: 100%;
+        height: 30%;
+    }
+    .LoginForm{
+        width: 100%;
+        height: 70%;
+        font-size: 12px;
+    }
+    .Forms input{
+        margin: 8px 0;
+    }
+    #captcha{
+        width: 69%;
+    }
+}
+@media only screen and (max-width:900px){
+    #captcha{
+        width: 69%;
+    }
 }
